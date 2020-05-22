@@ -8,7 +8,11 @@ type ComponentProps = {
 } & ContainerProps
 
 const Component: React.FC<ComponentProps> = props => (
-  <div className={props.className}>top page</div>
+  <div className={props.className}>
+    <div className="header">
+      <div className="title">Nepota!</div>
+    </div>
+  </div>
 )
 
 const StyledComponent = styled(Component)`
