@@ -26,7 +26,6 @@ export default createGlobalStyle`
     width: 100%;
     height: 100%;
     overflow: hidden;
-    color: white;
     background: white;
     line-height: 1;
     letter-spacing: 0;
