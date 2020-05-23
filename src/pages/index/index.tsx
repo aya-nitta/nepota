@@ -3,9 +3,7 @@ import styled from 'styled-components'
 import style from './style'
 
 type ContainerProps = {}
-type ComponentProps = {
-  className: string
-} & ContainerProps
+type ComponentProps = { className: string } & ContainerProps
 
 const Component: React.FC<ComponentProps> = props => (
   <div className={props.className}>
