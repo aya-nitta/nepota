@@ -5,7 +5,7 @@ export default css`
     position: relative;
     width: 100%;
     height: 20rem;
-    background: linear-gradient(-25deg, #ffd54f, #ff8a65);
+    background: #ffd632;
     > .title {
       display: flex;
       justify-content: center;

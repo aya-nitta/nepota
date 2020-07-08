@@ -8,7 +8,9 @@ type ComponentProps = { className: string } & ContainerProps
 const Component: React.FC<ComponentProps> = props => (
   <div className={props.className}>
     <div className="header">
-      <div className="title">Nepota!</div>
+      <div className="title">
+        <a href="/nepota">Nepota!</a>
+      </div>
     </div>
   </div>
 )

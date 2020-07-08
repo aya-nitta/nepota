@@ -2,7 +2,7 @@
   "name": "nepota",
   "version": "0.0.1",
   "scripts": {
-    "dev": "next dev --hostname=192.168.1.6",
+    "dev": "next dev --hostname=192.168.1.7",
     "start": "next start",
     "build": "next build",
     "export": "next export"
