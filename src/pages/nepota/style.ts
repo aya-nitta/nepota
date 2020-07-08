@@ -15,7 +15,7 @@ export default css`
       text-align: center;
       font-size: 5rem;
       font-weight: bold;
-      font-family: 'mkpop';
+      font-family: 'Mkpop';
     }
   }
   > .main {
