@@ -9,10 +9,11 @@ import Head from 'next/head'
 const _App: React.FC<AppProps> = props => (
   <>
     <Head>
-      <link
+      {/* <link
         href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
         rel="stylesheet"
-      />
+      /> */}
+      <link rel="icon" href="/favicon.ico" />
     </Head>
     <GlobalStyle />
     <Layout {...props} />
