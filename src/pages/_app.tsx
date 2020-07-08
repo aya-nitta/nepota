@@ -13,7 +13,7 @@ const _App: React.FC<AppProps> = props => (
         href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
         rel="stylesheet"
       /> */}
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
     <GlobalStyle />
     <Layout {...props} />
