@@ -2,8 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
   @font-face {
-    font-family: 'mkpop';
-    src: url('../../public/mkpop.ttf') format('ttf')
+    font-family: 'Mkpop';
+    src: url('/mkpop.ttf');
   }
   *,
   :after,
