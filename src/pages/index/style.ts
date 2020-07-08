@@ -18,4 +18,7 @@ export default css`
       font-family: 'Pacifico', cursive;
     }
   }
+  a {
+    color: black;
+  }
 `

@@ -26,4 +26,7 @@ export default css`
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5rem;
   }
+  a {
+    color: #ffd632;
+  }
 `

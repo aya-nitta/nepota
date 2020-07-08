@@ -64,7 +64,6 @@ export default createGlobalStyle`
   }
   a {
     /* color: inherit; */
-    color:#ffd632;
     text-decoration: none;
   }
   img {
