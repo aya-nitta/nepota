@@ -61,10 +61,11 @@ export default createGlobalStyle`
   dl,
   dd {
     margin: 0;
+    letter-spacing: 1px;
   }
   a {
     /* color: inherit; */
-    text-decoration: none;
+    /* text-decoration: none; */
   }
   img {
     border: 0px;
@@ -73,7 +74,7 @@ export default createGlobalStyle`
   ul {
     margin: 0;
     padding: 0;
-    list-style: none;
+    /* list-style: none; */
   }
   input,
   button,
