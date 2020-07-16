@@ -996,6 +996,13 @@
     redux-thunk "^2.3.0"
     reselect "^4.0.0"
 
+"@soichiro_nitta/animations@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@soichiro_nitta/animations/-/animations-0.0.1.tgz#d0d7805ec5623f2bc15e00c89c9ace5df6e8f304"
+  integrity sha512-TYQRFn9FeG/4GrtquH2zX1KAwP+RwpZso5RMAkKJ3lzgT+87rpPWDbQyBmTAakbmXy0JdWzLq6SEdRQ4MW5ZiA==
+  dependencies:
+    gsap "^3.4.0"
+
 "@tanem/svg-injector@^8.0.49":
   version "8.0.49"
   resolved "https://registry.yarnpkg.com/@tanem/svg-injector/-/svg-injector-8.0.49.tgz#39433f40fc7b240a79e1f4091ea26665a005b22c"
@@ -3126,6 +3133,11 @@ gsap@^3.2.0:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.2.6.tgz#fbaddab30c8c2fb029d61ef56f667b42f99c932f"
   integrity sha512-QX7WQWZUAooS9tOCYg4kKLcnjBreA4Xyu11EVx6zp4BbKijnMK+NtzkB47las/E0luFE84hGscOZm5vd13KzZA==
+
+gsap@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.4.0.tgz#b1cec510b0dd30cbb115fb2bece37a3b86c9327d"
+  integrity sha512-b/GJjLIl9X5bPrlQ6ek7KV6ZPKP2HsKXr7HcuTEQe4725SkCTialLHnrhglxZISIg+zCRrQXawexRUeKZz5CjQ==
 
 has-ansi@^2.0.0:
   version "2.0.0"
