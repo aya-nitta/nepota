@@ -14,6 +14,7 @@ export default css`
     font-size: 5rem;
     font-weight: bold;
     font-family: 'Mkpop';
+    opacity: 0;
   }
   > h1 {
     position: relative;

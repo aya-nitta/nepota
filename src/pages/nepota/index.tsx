@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import style from './style'
+import { animations } from '@soichiro_nitta/animations'
 
 type ContainerProps = {}
-type ComponentProps = { className: string } & ContainerProps
+type ComponentProps = {
+  className: string
+  refs: { title: React.MutableRefObject<HTMLDivElement | null> }
+} & ContainerProps
 
 const Component: React.FC<ComponentProps> = props => (
   <div className={props.className}>
-    <div className="title">
+    <div className="title" ref={props.refs.title}>
       <h1>ハジメマシテ!!</h1>
     </div>
     <div className="main">
@@ -90,7 +94,17 @@ const StyledComponent = styled(Component)`
 `
 
 const Container: React.FC<ContainerProps> = props => {
-  return <StyledComponent className="nepota" {...props} />
+  const refs = {
+    title: useRef<HTMLDivElement>(null)
+  }
+
+  useEffect(() => {
+    if (refs.title.current) {
+      animations.opacity(refs.title.current, 1, 1, 'InOut')
+    }
+  }, [refs.title])
+
+  return <StyledComponent className="nepota" {...{ refs, ...props }} />
 }
 
 export default Container
