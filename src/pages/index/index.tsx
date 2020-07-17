@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import style from './style'
 import { animations } from '@soichiro_nitta/animations'
@@ -30,9 +30,16 @@ const Container: React.FC<ContainerProps> = props => {
   }
 
   useEffect(() => {
-    if (refs.finger.current) {
-      setInterval(animations.x(refs.finger.current, '3rem', 0.5, 'InOut'))
-    }
+    setInterval(() => {
+      if (refs.finger.current) {
+        animations.x(refs.finger.current, '5rem', 0.5, 'In')
+        setTimeout(() => {
+          if (refs.finger.current) {
+            animations.x(refs.finger.current, '0rem', 1, 'Out')
+          }
+        }, 500)
+      }
+    }, 1500)
   }, [refs.finger])
 
   return <StyledComponent className="index" {...{ refs, ...props }} />
