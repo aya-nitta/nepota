@@ -1,25 +1,21 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import style from './style'
-// import gsap from 'react-gsap-enhancer'
+import { animations } from '@soichiro_nitta/animations'
 
 type ContainerProps = {}
-type ComponentProps = { className: string } & ContainerProps
+type ComponentProps = {
+  className: string
+  refs: { finger: React.MutableRefObject<HTMLImageElement | null> }
+} & ContainerProps
 
 const Component: React.FC<ComponentProps> = props => (
   <div className={props.className}>
     <div className="wrapper">
-      <div className="inner">
-        <div className="nepota">
-          <a href="/nepota">
-            {' '}
-            <img src="/finger.svg" width="80" height="80" />
-            Nepota
-          </a>
-        </div>
-        {/* <div className="click">click here</div> */}
-        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" />
-      </div>
+      <a href="/nepota">
+        <img src="/finger.svg" ref={props.refs.finger} />
+        <span>Nepota</span>
+      </a>
     </div>
   </div>
 )
@@ -29,7 +25,17 @@ const StyledComponent = styled(Component)`
 `
 
 const Container: React.FC<ContainerProps> = props => {
-  return <StyledComponent className="index" {...props} />
+  const refs = {
+    finger: useRef<HTMLImageElement>(null)
+  }
+
+  useEffect(() => {
+    if (refs.finger.current) {
+      setInterval(animations.x(refs.finger.current, '3rem', 0.5, 'InOut'))
+    }
+  }, [refs.finger])
+
+  return <StyledComponent className="index" {...{ refs, ...props }} />
 }
 
 export default Container

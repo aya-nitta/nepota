@@ -14,35 +14,18 @@ export default css`
     height: 100%;
     font-size: 10rem;
     font-weight: bold;
-    > .inner {
-      > .nepota {
-        font-family: 'Mkpop';
-        > a {
-          color: black;
-          > img:nth-child(1) {
-            padding-right: 2rem;
-            -webkit-animation: right 0.8s infinite ease-in-out;
-            animation: right 0.8s infinite ease-in-out;
-          }
-        }
+    > a {
+      display: block;
+      position: relative;
+      font-family: 'Mkpop';
+      color: black;
+      > img {
+        position: absolute;
+        top: 1rem;
+        left: -15rem;
+        width: 10rem;
+        height: 10rem;
       }
-      /* > .click {
-        font-size: 3rem;
-        text-align: center;
-        color: #dcdcdc;
-      } */
-    }
-  }
-
-  @keyframes right {
-    0% {
-      transform: translate(-15px);
-    }
-    50% {
-      transform: translate(15px);
-    }
-    100% {
-      transform: translate(-15px);
     }
   }
 `
