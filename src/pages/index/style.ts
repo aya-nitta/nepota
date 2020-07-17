@@ -21,10 +21,10 @@ export default css`
       color: black;
       > img {
         position: absolute;
-        top: 1rem;
-        left: -15rem;
-        width: 10rem;
-        height: 10rem;
+        top: 1.5rem;
+        left: -12rem;
+        width: 8rem;
+        height: 8rem;
       }
     }
   }

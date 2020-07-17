@@ -33,9 +33,11 @@ const Container: React.FC<ContainerProps> = props => {
     setInterval(() => {
       if (refs.finger.current) {
         animations.x(refs.finger.current, '5rem', 0.5, 'In')
+        animations.scale(refs.finger.current, 1.2, 0.5, 'In')
         setTimeout(() => {
           if (refs.finger.current) {
             animations.x(refs.finger.current, '0rem', 1, 'Out')
+            animations.scale(refs.finger.current, 1, 1, 'Out')
           }
         }, 500)
       }
