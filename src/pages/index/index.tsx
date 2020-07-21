@@ -10,16 +10,16 @@ type ComponentProps = {
   className: string
   refs: {
     finger: React.MutableRefObject<HTMLImageElement | null>
-    title: React.MutableRefObject<HTMLSpanElement | null>
+    wrapper: React.MutableRefObject<HTMLDivElement | null>
   }
 } & ContainerProps
 
 const Component: React.FC<ComponentProps> = props => (
   <div className={props.className}>
-    <div className="wrapper">
+    <div className="wrapper" ref={props.refs.wrapper}>
       <a href="/nepota">
         <img src="/finger.svg" ref={props.refs.finger} />
-        <span ref={props.refs.title}>Nepota</span>
+        <span>Nepota</span>
       </a>
     </div>
   </div>
@@ -32,7 +32,7 @@ const StyledComponent = styled(Component)`
 const Container: React.FC<ContainerProps> = props => {
   const refs = {
     finger: useRef<HTMLImageElement>(null),
-    title: useRef<HTMLSpanElement>(null)
+    wrapper: useRef<HTMLDivElement>(null)
   }
 
   useEffect(() => {
@@ -54,9 +54,18 @@ const Container: React.FC<ContainerProps> = props => {
   useEffectAsync({
     effect: async () => {
       await functions.delay(1)
-      console.log('test')
+      if (refs.wrapper.current) {
+        animations.scale(refs.wrapper.current, 1.2, 0.5, 'In')
+        animations.opacity(refs.wrapper.current, 1, 0.5, 'In')
+
+        await functions.delay(0.5)
+
+        if (refs.wrapper.current) {
+          animations.scale(refs.wrapper.current, 1, 1, 'Out')
+        }
+      }
     },
-    deps: []
+    deps: [refs.wrapper]
   })
 
   return <StyledComponent className="index" {...{ refs, ...props }} />
