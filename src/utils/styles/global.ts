@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
+  @font-face {
+    font-family: 'Mkpop';
+    src: url('/mkpop.ttf');
+  }
   *,
   :after,
   :before {
@@ -33,6 +37,18 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     z-index: 0;
+    /* background-image: linear-gradient(
+      -45deg,
+      #1c2c52 25%,
+      #5c658b  25%,
+      #5c658b  50%,
+      #1c2c52 50%,
+      #1c2c52 75%,
+      #5c658b 75%,
+      #5c658b  */
+    );
+    background-size: 250px 250px;
+    background-attachment: fixed;
   }
   #__next {
     width: 100%;
@@ -45,10 +61,11 @@ export default createGlobalStyle`
   dl,
   dd {
     margin: 0;
+    letter-spacing: 1px;
   }
   a {
-    color: inherit;
-    text-decoration: none;
+    /* color: inherit; */
+    /* text-decoration: none; */
   }
   img {
     border: 0px;
@@ -57,7 +74,7 @@ export default createGlobalStyle`
   ul {
     margin: 0;
     padding: 0;
-    list-style: none;
+    /* list-style: none; */
   }
   input,
   button,
