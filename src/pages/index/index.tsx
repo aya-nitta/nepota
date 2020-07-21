@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import style from './style'
 import { animations } from '@soichiro_nitta/animations'
 import { functions } from '~/utils/functions'
+import { useEffectAsync } from '~/hooks/useEffectAsync'
 
 type ContainerProps = {}
 type ComponentProps = {
@@ -49,6 +50,14 @@ const Container: React.FC<ContainerProps> = props => {
       }
     }, 1500)
   }, [refs.finger])
+
+  useEffectAsync({
+    effect: async () => {
+      await functions.delay(1)
+      console.log('test')
+    },
+    deps: []
+  })
 
   return <StyledComponent className="index" {...{ refs, ...props }} />
 }
