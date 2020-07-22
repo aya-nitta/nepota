@@ -53,7 +53,7 @@ const Container: React.FC<ContainerProps> = props => {
 
   useEffectAsync({
     effect: async () => {
-      await functions.delay(1)
+      await functions.delay(0.5)
       if (refs.wrapper.current) {
         animations.scale(refs.wrapper.current, 1.2, 0.5, 'In')
         animations.opacity(refs.wrapper.current, 1, 0.5, 'In')
