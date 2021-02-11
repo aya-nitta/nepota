@@ -14,6 +14,7 @@ export default css`
     height: 100%;
     font-size: 10rem;
     font-weight: bold;
+    opacity: 0;
     > a {
       display: block;
       position: relative;
